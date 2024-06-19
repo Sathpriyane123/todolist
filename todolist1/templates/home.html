@@ -16,6 +16,7 @@
         </div>
         <div class="form">
             <form action="dta" method="POST">
+                {% csrf_token %}
                 <input type="text" name="name" id="name" placeholder="Enter Name">
                 <input type="text" name="task" placeholder="Enter your task">
                 <button type="submit">Save</button>
@@ -31,7 +32,7 @@
                         <th>Action</th>
                     </tr>
                     <tbody>
-                        {% for i in a %}
+                        {% for i in as %}
                         <tr>
                             <td>{{i.Name}}</td>
                             <td>{{i.Task}}</td>

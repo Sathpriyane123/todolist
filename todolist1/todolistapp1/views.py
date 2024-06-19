@@ -6,8 +6,8 @@ from. models import Task
 
 
 def home(request):
-    a=Task.object.all()
-    return render(request,'home.html'{'a':a})
+    a=Task.objects.all()
+    return render(request,'home.html',{'as':a})
 
 def form(request):
     if request.method == 'POST':

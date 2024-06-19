@@ -36,7 +36,9 @@
                         <tr>
                             <td>{{i.Name}}</td>
                             <td>{{i.Task}}</td>
-                            <td><a href="{% url 'del'id=i.id}"><button type="button">del</button></a></td>
+                            <td><a href="{% url 'del' id=i.id  %}"><button type="button">del</button></a></td>
+                            <td><a href="{% url 'edit' id=i.id  %}"><button type="button" >edit</button></a></td>
+
                         </tr>
                         {% endfor %}
                     </tbody>

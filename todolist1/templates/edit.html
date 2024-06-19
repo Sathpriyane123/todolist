@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h3>edit</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% if editss %}
+            <input type="text" name="name" id="name" placeholder="Edit name" value="{{editss.Name}}">
+            <input type="text" name="task" id="task" placeholder="Edit Task" value="{{editss.Task}}">
+            <button type="submit">Save</button>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
